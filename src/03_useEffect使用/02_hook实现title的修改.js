@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function HookCounterChangeTitle() {
   const [count, setCount] = useState(0);
 
+  // 相当于 componentDidMount 和 componentDidUpdate
   useEffect(() => {
     document.title = `当前计数: ${count}`;
   })

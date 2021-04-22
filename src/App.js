@@ -18,6 +18,7 @@ import Profile from './05_useReducer使用/profile'
 import RefHookDemo from './06_useRef使用/01_useRef引用dom'
 import RefHookDemo02 from './06_useRef使用/02_useRef引用其他数据'
 
+import Rerender from './07_useCallback使用/01_问题'
 export const UserContext = createContext();
 export const ThemeContext = createContext();
 export default function App(){
@@ -37,15 +38,11 @@ export default function App(){
         {/* <MultiUseEffect></MultiUseEffect> */}
 
         {/* 4.useContext */}
-        <UserContext.Provider value={{ name: "why", age: 18 }}>
+        {/* <UserContext.Provider value={{ name: "why", age: 18 }}>
             <ThemeContext.Provider value={{ color: "red", fontSize: "20px" }}>
               <ContextClass></ContextClass>
+              <ContextHook></ContextHook>
             </ThemeContext.Provider>
-        </UserContext.Provider>
-        {/* <UserContext.Provider value={{ name: "why", age: 18 }}>
-          <ThemeContext.Provider value={{ color: "red", fontSize: "20px" }}>
-            <ContextHook />
-          </ThemeContext.Provider>
         </UserContext.Provider> */}
 
         {/* 5.useContext */}
@@ -55,6 +52,9 @@ export default function App(){
         {/* 6.useRef */}
         {/* <RefHookDemo></RefHookDemo> */}
         {/* <RefHookDemo02></RefHookDemo02> */}
+
+        {/* 7.useCallBack */}
+        <Rerender></Rerender>
       </div>
     )
 }
